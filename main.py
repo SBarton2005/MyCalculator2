@@ -44,3 +44,37 @@ def mul_fac():
     return i
   else:
     return "You can only find the factorial of a natural number"
+def qua_roo():
+  a = float(input("a: "))
+  b = float(input("b: "))
+  c = float(input("c: "))
+  d = (b ** 2) - (4 * a * c)
+  e = d ** .5
+  fa = - b + e
+  fb = - b - e
+  ga = fa / 2 / a
+  gb = fb / 2 / a
+  return ga, gb
+def qua_ver():
+  a = float(input("a: "))
+  b = float(input("b: "))
+  c = float(input("c: "))
+  x = - b / 2 / a
+  y = (a * x* x) + (b * x) + c
+  return x, y
+def qua_sol():
+  a = float(input("a: "))
+  b = float(input("b: "))
+  c = float(input("c: "))
+  x = float(input("x: "))
+  y = (a * x * x) + (b * x) + c
+  return y
+def qua_fac():
+  xa, xb = qua_roo()
+  if xa < 0:
+    if xb < 0:
+      return f"(x+{xa*-1})(x+{xb*-1})"
+    return f"(x+{xa*-1})(x-{xb})"
+  if xb < 0:
+    return f"(x-{xa})(x+{xb*-1})"
+  return f"(x-{xa})(x-{xb})"
