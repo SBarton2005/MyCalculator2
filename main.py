@@ -112,7 +112,7 @@ def cal_bas():
   elif p == "rem":
     return bas_rem()
   else:
-    return "You didn't pick a bas operation"
+    return "You didn\'t pick a bas operation. Try add, sub, mul, div, or rem."
 def cal_mul():
   p = input("Mul Operation: ")
   if p == "exp":
@@ -122,7 +122,7 @@ def cal_mul():
   elif p == "fac":
     return mul_fac()
   else:
-    return "You didn't pick a mul operation"
+    return "You didn\'t pick a mul operation. Try exp, roo, or fac."
 def cal_qua():
   p = input("Qua Operation: ")
   if p == "roo":
@@ -134,11 +134,29 @@ def cal_qua():
   elif p == "fac":
     return qua_fac()
   else:
-    return "You didnt' pick a qua operation"
-def cal_mai(o):
+    return "You didn\'t pick a qua operation. Try roo, sol, ver, or fac."
+def cal_rit():
+  p = input("Rit Operation: ")
+  if p == "pll":
+    return rit_pll()
+  elif p == "phl":
+    return rit_phl()
+  elif p == "gen":
+    return rit_gen()
+  elif p == "che":
+    return rit_che()
+  else:
+    return "You didn\'t pick a rit operation. Try pll, phl, gen, or che."
+def cal_mai():
+  o = input("Section: ")
   if o == "bas":
     return cal_bas()
   elif o == "mul":
     return cal_mul()
   elif o == "qua":
     return cal_qua()
+  elif o == "rit":
+    return cal_rit()
+  else:
+    return "You didn\'t pick one of the sections we have operations for. Try bas, mul, qua, or rit"
+print(cal_mai())
