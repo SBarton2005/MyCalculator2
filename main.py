@@ -78,3 +78,49 @@ def qua_fac():
   if xb < 0:
     return f"(x-{xa})(x+{xb*-1})"
   return f"(x-{xa})(x-{xb})"
+def rit_pll():
+  a = float(input("Leg: "))
+  b = float(input("Leg: "))
+  c = (a ** 2) + (b ** 2)
+  return c ** .5
+def rit_phl():
+  a = float(input("Hypotenuse: "))
+  b = float(input("Leg: "))
+  c = (a ** 2) - (b ** 2)
+  return c ** .5
+def rit_che():
+  a = float(input("Leg: "))
+  b = float(input("Leg: "))
+  c = float(input("Hypotenuse: "))
+  return (a ** 2) + (b ** 2) == c ** 2
+def rit_gen():
+  a = int(input("Odd number: "))
+  b = (a ** 2) / 2
+  c = b - .5
+  d = b + .5
+  return c, d
+def cal(o):
+  if o == "bas":
+    p = input("Bas Operation: ")
+    if p == "add":
+      return bas_add():
+    elif p == "sub":
+      return bas_sub()
+    elif p == "mul":
+      return bas_mul()
+    elif p == "div":
+      return bas_div()
+    elif p == "rem":
+      return bas_rem()
+    else:
+      return "You didn't pick a bas operation"
+  elif o == "mul":
+    p = input("Mul Operation: ")
+    if p == "exp":
+      return mul_exp()
+    elif p == "roo":
+      return mul_roo()
+    elif p == "fac":
+      return mul_fac()
+    else:
+      return "You didn't pick a mul operation"
