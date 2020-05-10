@@ -99,28 +99,46 @@ def rit_gen():
   c = b - .5
   d = b + .5
   return c, d
-def cal(o):
+def cal_bas():
+  p = input("Bas Operation: ")
+  if p == "add":
+    return bas_add()
+  elif p == "sub":
+    return bas_sub()
+  elif p == "mul":
+    return bas_mul()
+  elif p == "div":
+    return bas_div()
+  elif p == "rem":
+    return bas_rem()
+  else:
+    return "You didn't pick a bas operation"
+def cal_mul():
+  p = input("Mul Operation: ")
+  if p == "exp":
+    return mul_exp()
+  elif p == "roo":
+    return mul_roo()
+  elif p == "fac":
+    return mul_fac()
+  else:
+    return "You didn't pick a mul operation"
+def cal_qua():
+  p = input("Qua Operation: ")
+  if p == "roo":
+    return qua_roo()
+  elif p == "sol":
+    return qua_sol()
+  elif p == "ver":
+    return qua_ver()
+  elif p == "fac":
+    return qua_fac()
+  else:
+    return "You didnt' pick a qua operation"
+def cal_mai(o):
   if o == "bas":
-    p = input("Bas Operation: ")
-    if p == "add":
-      return bas_add():
-    elif p == "sub":
-      return bas_sub()
-    elif p == "mul":
-      return bas_mul()
-    elif p == "div":
-      return bas_div()
-    elif p == "rem":
-      return bas_rem()
-    else:
-      return "You didn't pick a bas operation"
+    return cal_bas()
   elif o == "mul":
-    p = input("Mul Operation: ")
-    if p == "exp":
-      return mul_exp()
-    elif p == "roo":
-      return mul_roo()
-    elif p == "fac":
-      return mul_fac()
-    else:
-      return "You didn't pick a mul operation"
+    return cal_mul()
+  elif o == "qua":
+    return cal_qua()
