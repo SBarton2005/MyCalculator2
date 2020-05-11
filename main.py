@@ -26,6 +26,28 @@ def bas_rem():
   a = input("# you want to be divided: ")
   b = input("# you want it to be divided by: ")
   return float(a) % float(b)
+def bas_asc():
+  a = input("#s you want to add, seperate with spaces: ")
+  a = a.split(" ")
+  b = input("#s you want to subtract, seperate with spaces: ")
+  b = b.split(" ")
+  c = 0
+  for d in a:
+    c += int(d)
+  for e in b:
+    c -= int(e)
+  return c
+def bas_mdc():
+  a = input("#s you want to multiply, seperate with spaces: ")
+  a = a.split(" ")
+  b = input("#s you want to divide by, seperate with spaces: ")
+  b = b.split(" ")
+  c = 1
+  for d in a:
+    c *= int(d)
+  for e in b:
+    c /= int(e)
+  return c
 def mul_exp():
   a = input("Base: ")
   b = input("Exponent: ")
@@ -111,6 +133,10 @@ def cal_bas():
     return bas_div()
   elif p == "rem":
     return bas_rem()
+  elif p == "asc":
+    return bas_asc()
+  elif p == "mdc":
+    return bas_mdc()
   else:
     return "You didn\'t pick a bas operation. Try add, sub, mul, div, or rem."
 def cal_mul():
