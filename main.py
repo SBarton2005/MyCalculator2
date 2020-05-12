@@ -121,6 +121,44 @@ def rit_gen():
   c = b - .5
   d = b + .5
   return c, d
+def rit_sin():
+  a = float(input("Opposite: "))
+  b = float(input("Hypotenuse: "))
+  return a / b
+def rit_cos():
+  a = float(input("Adjacent: "))
+  b = float(input("Hypotenuse: "))
+  return a / b
+def rit_tan():
+  a = float(input("Opposite: "))
+  b = float(input("Adjacent: "))
+  return a / b
+def cir_two_per():
+  r = float(input("Radius: "))
+  pi = 3.14
+  return 2 * pi * r
+def cir_two_are():
+  r = float(input("Radius: "))
+  pi = 3.14
+  return pi * r * 2
+def cir_sph_sar():
+  r = float(input("Radius: "))
+  pi = 3.14
+  return 4 * pi * r * r
+def cir_sph_vol():
+  r = float(input("Radius: "))
+  pi = 3.14
+  return 4 / 3 * pi * r * r * r
+def cir_cyl_sar():
+  r = float(input("Radius: "))
+  h = float(input("Height: "))
+  pi = 3.14
+  return 2 * pi * r * ( r + h )
+def cir_cyl_vol():
+  r = float(input("Radius: "))
+  h = float(input("Height: "))
+  pi = 3.14
+  return pi * r * r * h
 def cal_bas():
   p = input("Bas Operation: ")
   if p == "add":
@@ -171,8 +209,40 @@ def cal_rit():
     return rit_gen()
   elif p == "che":
     return rit_che()
+  elif p == "sin":
+    return rit_sin()
+  elif p == "cos":
+    return rit_cos()
+  elif p == "tan":
+    return rit_tan()
   else:
-    return "You didn\'t pick a rit operation. Try pll, phl, gen, or che."
+    return "You didn\'t pick a rit operation. Try pll, phl, gen, che, sin, cos, or tan."
+def cal_cir():
+  p = input("Cir Shape: ")
+  if p == "two":
+    q = input("Two Formula: ")
+    if q == "per":
+      return cir_two_per()
+    elif q == "are":
+      return cir_two_are()
+    else:
+      return "You didn't pick one of our formulas. Try per or are"
+  elif p == "sph":
+    q = input("Sph Formula: ")
+    if q == "sar":
+      return cir_sph_sar()
+    elif q == "vol":
+      return cir_sph_vol()
+    else:
+      return "You didn't pick one of our formulas. Try sar or vol"
+  elif p == "cyl":
+    q = input("Cyl Formula: ")
+    if q == "sar":
+      return cir_cyl_sar()
+    elif q == "vol":
+      return cir_cyl_vol()
+    else:
+      return "You didn't pick one of our formulas. Try sar or vol"
 def cal_mai():
   o = input("Section: ")
   if o == "bas":
@@ -183,6 +253,8 @@ def cal_mai():
     return cal_qua()
   elif o == "rit":
     return cal_rit()
+  elif o == "cir":
+    return cal_cir()
   else:
-    return "You didn\'t pick one of the sections we have operations for. Try bas, mul, qua, or rit"
+    return "You didn\'t pick one of the sections we have operations for. Try bas, mul, qua, rit, or cir"
 print(cal_mai())
