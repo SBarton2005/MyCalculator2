@@ -159,6 +159,23 @@ def cir_cyl_vol():
   h = float(input("Height: "))
   pi = 3.14
   return pi * r * r * h
+def cir_con_sar():
+  r = float(input("Radius: "))
+  h = float(input("Height: "))
+  a = h ** 2 + r ** 2
+  pi = 3.14
+  return pi * r * ( r + a ** .5 )
+def cir_con_vol():
+  r = float(input("Radius: "))
+  h = float(input("Height: "))
+  pi = 3.14
+  return pi * r * r * h / 3
+def cir_con_las():
+  r = float(input("Radius: "))
+  h = float(input("Height: "))
+  a = h ** 2 + r ** 2
+  pi = 3.14
+  return pi * r * ( a ** .5 )
 def cal_bas():
   p = input("Bas Operation: ")
   if p == "add":
@@ -243,6 +260,18 @@ def cal_cir():
       return cir_cyl_vol()
     else:
       return "You didn't pick one of our formulas. Try sar or vol"
+  elif p == "con":
+    q = input("Con Formula: ")
+    if q == "sar":
+      return cir_con_sar()
+    elif q == "vol":
+      return cir_con_vol
+    elif q == "las":
+      return cir_con_las
+    else: 
+      return "You didn't pick one of our formulas. Try sar, vol, or las"
+  else:
+    return "You didn't pick one of our shapes. Try two, sph, cyl, or con"
 def cal_mai():
   o = input("Section: ")
   if o == "bas":
