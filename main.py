@@ -140,7 +140,7 @@ def cir_two_per():
 def cir_two_are():
   r = float(input("Radius: "))
   pi = 3.14
-  return pi * r * 2
+  return pi * r * r
 def cir_sph_sar():
   r = float(input("Radius: "))
   pi = 3.14
