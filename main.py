@@ -100,6 +100,23 @@ def qua_fac():
   if xb < 0:
     return f"(x-{xa})(x+{xb*-1})"
   return f"(x-{xa})(x-{xb})"
+def qua_vef():
+  h, k = qua_ver()
+  a = float(input("a again: "))
+  if h < 0:
+    if k < 0:
+      return f"{a}(x{h})^2{k}"
+    else:
+      return f"{a}(x{h})^2+{k}"
+  elif k < 0:
+    return f"{a}(x-{h})^2{k}"
+  else:
+    return f"{a}(x-{h})^2+{k}"
+def qua_vts():
+  h = float(input("x coordinate of vertex: "))
+  k = float(input("y coordinate of vertex: "))
+  a = float(input("a: "))
+  
 def rit_pll():
   a = float(input("Leg: "))
   b = float(input("Leg: "))
@@ -214,6 +231,8 @@ def cal_qua():
     return qua_ver()
   elif p == "fac":
     return qua_fac()
+  elif p == "vef":
+    return qua_vef()
   else:
     return "You didn\'t pick a qua operation. Try roo, sol, ver, or fac."
 def cal_rit():
